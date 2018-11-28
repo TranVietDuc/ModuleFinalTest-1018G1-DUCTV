@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Min</title>
+</head>
+<body>
+<script>
+    var scores = ["7.5", "6.5", "5.5", "8", "9", "3"];
+
+    // Ham lay gia tri diem thi nho nhat
+    function findMinScore(arr) {
+        let min = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    // Thong bao diem thi thap nhat trong mang diem thi score duoc nhap vao
+    alert("Diem thi thap nhat la : " + findMinScore(scores));
+</script>
+</body>
+</html>

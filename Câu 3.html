@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>isPrime</title>
+</head>
+<body>
+<script>
+    // Ham kiem tra so nguyen nhap vao co phai so nguyen to khong
+    function isPrime(number) {
+        if (number < 2) return false;
+        else if (number === 2) return true;
+        else {                             // Thuat toan kiem tra tinh nguyen to
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0)
+                    return false;
+                console.log(i);
+            }
+            return true;
+        }
+    }
+
+
+    // Kiem tra tinh nguyen to cua mot so nhap vao tu man hinh
+
+    var number = parseInt(prompt("Insert a number to check is it a Prime!"));
+    alert(isPrime(number));
+
+</script>
+</body>
+</html>

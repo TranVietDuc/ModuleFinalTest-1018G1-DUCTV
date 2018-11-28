@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tryRemoveFromArray</title>
+</head>
+<body>
+<script>
+
+    //Xay dung ham xoa mot phan tu voi chi so cho truoc
+    function tryRemoveFromArray(arr, index) {
+        if (index > arr.length - 1) {
+            document.write("Index is longer than array's length...It is not valid!!!" + "<br>");
+        }
+        else {
+            for (let i = index; i < arr.length - 1; i++) {
+                arr [i] = arr[i + 1];
+                console.log(arr[i]);
+            }
+            arr.pop();
+        }
+        document.write(arr);
+
+    }
+
+    //Nhap vao mang de test function tryRemoveFromArray()
+    var array = ["Java", "PHP", "C++", "Python", "Css"];
+    tryRemoveFromArray(array, 2);
+</script>
+</body>
+</html>
